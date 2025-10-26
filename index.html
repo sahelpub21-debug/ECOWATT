@@ -1,35 +1,16 @@
-import React from "react";
-import { motion } from "framer-motion";
-import {
-  ArrowDown,
-  ExternalLink,
-  ChevronRight,
-  BarChart3,
-  Target,
-  Leaf,
-  FileText,
-  Users,
-  Newspaper,
-  TrendingUp,
-  LineChart,
-  CheckCircle2,
-} from "lucide-react";
-
 /**
- * Landing page "candidature-case study" — style techno, épuré, minimal.
+ * Landing page "candidature-case study" — LIGHT MODE
+ * - Style techno, épuré, minimal
  * - Stickybar minimaliste (logo Ecowatt, photo + 2 lignes, menu centré)
  * - Hero plein écran avec illustration animée en background
- * - Section Approach (intro + 3 colonnes + boutons placeholders)
- * - Section Partis pris (Branding / Digital Marketing / Event & PR)
- * - Section Management model (cadence, rôles, livrables qui vivent)
- * - Section Success metrics (KPI)
+ * - Sections: Approach, Partis pris, Management model, Success metrics
  *
  * TailwindCSS requis. Framer Motion pour micro-animations. Lucide pour icônes.
  */
 
-export default function EcowattCandidatureLanding() {
+export default function EcowattCandidatureLandingLight() {
   return (
-    <div className="min-h-screen bg-[#0B0E12] text-[#E8EDF2] selection:bg-[#15C37E]/30 selection:text-white scroll-smooth">
+    <div className="min-h-screen bg-[#F6F8FA] text-[#0B1220] selection:bg-[#15C37E]/15 selection:text-[#0B1220] scroll-smooth">
       <AmbientBG />
       <Navbar />
       <main>
@@ -48,23 +29,23 @@ function Navbar() {
   return (
     <div className="fixed inset-x-0 top-0 z-40">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mt-4 rounded-2xl border border-white/5 bg-[#0F1319]/70 backdrop-blur supports-[backdrop-filter]:bg-[#0F1319]/60">
+        <div className="mt-4 rounded-2xl border border-black/10 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70">
           <nav className="flex items-center justify-between px-4 py-2">
             {/* Gauche : Logo Ecowatt + Profil + 2 lignes */}
             <div className="flex items-center gap-4">
               <LogoEcowatt />
-              <span className="text-white/20">|</span>
+              <span className="text-neutral-900/20">|</span>
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-white/10 ring-1 ring-white/10 flex items-center justify-center text-sm font-semibold">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-neutral-900/5 ring-1 ring-black/10 text-sm font-semibold">
                   ZG
                 </div>
                 <div className="leading-tight">
-                  <div className="text-sm font-medium">Zakaria Gallouch</div>
+                  <div className="text-sm font-medium text-neutral-900">Zakaria Gallouch</div>
                   <a
                     href="https://ecowatt.ma" // TODO: remplacer par le lien direct de l'offre si disponible
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-xs text-[#A8B0BA] hover:text-white"
+                    className="inline-flex items-center gap-1 text-xs text-neutral-600 hover:text-neutral-900"
                   >
                     Candidature Responsable Communication Marketing
                     <ExternalLink className="h-3 w-3" />
@@ -74,19 +55,19 @@ function Navbar() {
             </div>
 
             {/* Centre : Menu minimal */}
-            <ul className="pointer-events-auto hidden items-center gap-6 text-sm text-[#A8B0BA] md:flex">
-              <li><a href="#apercu" className="hover:text-white">Aperçu</a></li>
-              <li><a href="#approche" className="hover:text-white">Approche</a></li>
-              <li><a href="#partispris" className="hover:text-white">Partis pris</a></li>
-              <li><a href="#modele" className="hover:text-white">Modèle</a></li>
-              <li><a href="#kpi" className="hover:text-white">KPI</a></li>
+            <ul className="pointer-events-auto hidden items-center gap-6 text-sm text-neutral-600 md:flex">
+              <li><a href="#apercu" className="hover:text-neutral-900">Aperçu</a></li>
+              <li><a href="#approche" className="hover:text-neutral-900">Approche</a></li>
+              <li><a href="#partispris" className="hover:text-neutral-900">Partis pris</a></li>
+              <li><a href="#modele" className="hover:text-neutral-900">Modèle</a></li>
+              <li><a href="#kpi" className="hover:text-neutral-900">KPI</a></li>
             </ul>
 
             {/* Droite : CTA mini-audit (placeholder) */}
             <div className="hidden md:block">
               <a
                 href="#approche"
-                className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/90 hover:border-white/30 hover:bg-white/5"
+                className="rounded-full border border-black/10 px-3 py-1.5 text-xs text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5"
               >
                 Mini-audit (aperçu)
               </a>
@@ -108,14 +89,14 @@ function Hero() {
     <section id="apercu" className="relative isolate flex min-h-[92vh] items-center pt-32">
       <div className="pointer-events-none absolute inset-0 -z-10">
         {/* gradient vignette */}
-        <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(21,195,126,0.15),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(21,195,126,0.08),transparent_60%)]" />
       </div>
       <div className="mx-auto mt-6 flex w-full max-w-5xl flex-col items-start gap-6 px-6 text-left">
         <motion.h1
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-2xl font-semibold leading-tight text-white sm:text-3xl lg:text-4xl"
+          className="text-2xl font-semibold leading-tight text-neutral-900 sm:text-3xl lg:text-4xl"
         >
           De la technique à la traction : faire du développement de la marque Ecowatt
           un **levier de croissance** — Corporate (marque), Sales Enablement (business), PR/CSR (réputation).
@@ -124,14 +105,14 @@ function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-2xl text-base text-[#A8B0BA]"
+          className="max-w-2xl text-base text-neutral-600"
         >
           Traduire l’ingénierie en décisions claires — pour les clients, les partenaires et les équipes.
         </motion.p>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
           <button
             onClick={scrollToApproach}
-            className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white hover:border-white/30 hover:bg-white/10"
+            className="group inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5"
           >
             Découvrir
             <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
@@ -149,14 +130,14 @@ function Approach() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.5 }}
-      className="group relative overflow-hidden rounded-2xl border border-white/5 bg-[#0F1319] p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.03)_inset] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.06)_inset]"
+      className="group relative overflow-hidden rounded-2xl border border-black/10 bg-white p-6 shadow-[0_0_0_1px_rgba(0,0,0,0.04)_inset] hover:shadow-[0_0_0_1px_rgba(0,0,0,0.08)_inset]"
     >
-      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#15C37E]/15 text-[#15C37E] ring-1 ring-[#15C37E]/20">
+      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#15C37E]/12 text-[#15C37E] ring-1 ring-[#15C37E]/20">
         <Icon className="h-5 w-5" />
       </div>
-      <h3 className="mb-2 text-lg font-semibold text-white">{title}</h3>
-      <p className="mb-4 text-sm leading-relaxed text-[#A8B0BA]">{text}</p>
-      <button className="inline-flex items-center gap-2 text-sm text-white/90 transition-colors hover:text-white">
+      <h3 className="mb-2 text-lg font-semibold text-neutral-900">{title}</h3>
+      <p className="mb-4 text-sm leading-relaxed text-neutral-600">{text}</p>
+      <button className="inline-flex items-center gap-2 text-sm text-neutral-900 transition-colors hover:text-black">
         {cta} <ChevronRight className="h-4 w-4" />
       </button>
       {/* halo */}
@@ -168,8 +149,8 @@ function Approach() {
     <section id="approche" className="relative z-10 scroll-mt-24 py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-xl font-semibold text-white">Approach</h2>
-          <p className="mt-3 text-base text-[#A8B0BA]">
+          <h2 className="text-xl font-semibold text-neutral-900">Approach</h2>
+          <p className="mt-3 text-base text-neutral-600">
             Nous ferons évoluer la marque pour garantir une cohérence B2B, PR et e-commerce,
             dans une orchestration multicanale mesurable.
           </p>
@@ -206,15 +187,15 @@ function PartisPris() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.5 }}
-      className="rounded-2xl border border-white/5 bg-[#0F1319] p-6"
+      className="rounded-2xl border border-black/10 bg-white p-6"
     >
       <div className="mb-3 flex items-center gap-3">
-        <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 text-white">
+        <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-neutral-900/5 text-neutral-900">
           <Icon className="h-5 w-5" />
         </div>
-        <h3 className="text-base font-semibold text-white">{title}</h3>
+        <h3 className="text-base font-semibold text-neutral-900">{title}</h3>
       </div>
-      <p className="text-sm leading-relaxed text-[#A8B0BA]">{children}</p>
+      <p className="text-sm leading-relaxed text-neutral-600">{children}</p>
     </motion.div>
   );
 
@@ -222,20 +203,20 @@ function PartisPris() {
     <section id="partispris" className="scroll-mt-24 py-16">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-xl font-semibold text-white">Partis pris</h2>
+          <h2 className="text-xl font-semibold text-neutral-900">Partis pris</h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <Pillar title="Branding" icon={Target}>
-            La marque comme <span className="text-white">outil d’aide à la décision</span> : une promesse utile,
+            La marque comme <span className="text-neutral-900 font-medium">outil d’aide à la décision</span> : une promesse utile,
             trois piliers prouvés et des messages capables de passer du chantier à la salle de réunion sans perdre en clarté.
           </Pillar>
           <Pillar title="Digital Marketing" icon={TrendingUp}>
-            Des parcours <span className="text-white">mesurables</span> : contenus alignés aux intentions de recherche,
+            Des parcours <span className="text-neutral-900 font-medium">mesurables</span> : contenus alignés aux intentions de recherche,
             pages qui rassurent, CTA honnêtes — pour transformer l’attention en rendez-vous qualifiés.
           </Pillar>
           <Pillar title="Event & PR" icon={Newspaper}>
             Faire circuler la preuve : salons outillés, récits terrains, porte-paroles formés, et des prises de parole
-            qui lient <span className="text-white">technique</span> et <span className="text-white">impact</span> (ROI, CO₂, disponibilité).
+            qui lient <span className="text-neutral-900 font-medium">technique</span> et <span className="text-neutral-900 font-medium">impact</span> (ROI, CO₂, disponibilité).
           </Pillar>
         </div>
       </div>
@@ -248,20 +229,20 @@ function ManagementModel() {
     <section id="modele" className="scroll-mt-24 py-16">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-xl font-semibold text-white">Management model</h2>
+          <h2 className="text-xl font-semibold text-neutral-900">Management model</h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-white/5 bg-[#0F1319] p-6">
-            <h3 className="mb-3 text-base font-semibold text-white">Cadence & rituels</h3>
-            <ul className="space-y-3 text-sm text-[#A8B0BA]">
+          <div className="rounded-2xl border border-black/10 bg-white p-6">
+            <h3 className="mb-3 text-base font-semibold text-neutral-900">Cadence & rituels</h3>
+            <ul className="space-y-3 text-sm text-neutral-600">
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 text-[#15C37E]"/> Hebdo éditorial (30’), revue pipeline MKT–Sales (30’), stand-up PR (15’).</li>
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 text-[#15C37E]"/> Backlog unique, sprints de 2 semaines, décisions guidées par dashboard partagé.</li>
               <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 text-[#15C37E]"/> Mesure systématique : contenus → MQL → SQL → Opportunités.</li>
             </ul>
           </div>
-          <div className="rounded-2xl border border-white/5 bg-[#0F1319] p-6">
-            <h3 className="mb-3 text-base font-semibold text-white">Rôles & synchronisation</h3>
-            <ul className="space-y-3 text-sm text-[#A8B0BA]">
+          <div className="rounded-2xl border border-black/10 bg-white p-6">
+            <h3 className="mb-3 text-base font-semibold text-neutral-900">Rôles & synchronisation</h3>
+            <ul className="space-y-3 text-sm text-neutral-600">
               <li className="flex items-start gap-2"><Users className="mt-0.5 h-4 w-4 text-[#15C37E]"/> Message House & templates = socle partagé (FR/AR/EN).</li>
               <li className="flex items-start gap-2"><Users className="mt-0.5 h-4 w-4 text-[#15C37E]"/> Produit/Technique/Commerce co-signent les preuves. La com’ orchestre, ne sur-promet pas, outille la vente.</li>
               <li className="flex items-start gap-2"><Users className="mt-0.5 h-4 w-4 text-[#15C37E]"/> Livrables qui vivent : Brand House 1‑page · Content Map · Battlecards · Press Kit.</li>
@@ -275,15 +256,15 @@ function ManagementModel() {
 
 function KPIs() {
   const K = ({ label, target, hint, icon: Icon }: any) => (
-    <div className="rounded-2xl border border-white/5 bg-[#0F1319] p-6">
+    <div className="rounded-2xl border border-black/10 bg-white p-6">
       <div className="mb-4 flex items-center gap-3">
-        <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 text-white">
+        <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-neutral-900/5 text-neutral-900">
           <Icon className="h-5 w-5" />
         </div>
-        <div className="text-sm text-[#A8B0BA]">{label}</div>
+        <div className="text-sm text-neutral-600">{label}</div>
       </div>
-      <div className="text-2xl font-semibold text-white">{target}</div>
-      <div className="mt-1 text-sm text-[#A8B0BA]">{hint}</div>
+      <div className="text-2xl font-semibold text-neutral-900">{target}</div>
+      <div className="mt-1 text-sm text-neutral-600">{hint}</div>
     </div>
   );
 
@@ -291,8 +272,8 @@ function KPIs() {
     <section id="kpi" className="scroll-mt-24 py-16">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-xl font-semibold text-white">Success metrics</h2>
-          <p className="mt-2 text-sm text-[#A8B0BA]">
+          <h2 className="text-xl font-semibold text-neutral-900">Success metrics</h2>
+          <p className="mt-2 text-sm text-neutral-600">
             Ordres de grandeur de départ — à calibrer avec les historiques Analytics & CRM.
           </p>
         </div>
@@ -311,8 +292,8 @@ function KPIs() {
 
 function Footer() {
   return (
-    <footer className="relative z-10 border-t border-white/5 py-10">
-      <div className="mx-auto max-w-6xl px-6 text-center text-xs text-[#A8B0BA]">
+    <footer className="relative z-10 border-t border-black/10 py-10">
+      <div className="mx-auto max-w-6xl px-6 text-center text-xs text-neutral-600">
         <div>© {new Date().getFullYear()} – Candidature · Zakaria Gallouch</div>
       </div>
     </footer>
@@ -320,7 +301,7 @@ function Footer() {
 }
 
 function AmbientBG() {
-  // Quelques orbes animées très douces
+  // Orbes animées très douces pour le light mode
   const bubbles = [
     { x: -300, y: -120, size: 380, delay: 0 },
     { x: 260, y: 60, size: 300, delay: 2 },
@@ -332,9 +313,9 @@ function AmbientBG() {
       {bubbles.map((b, i) => (
         <motion.div
           key={i}
-          initial={{ opacity: 0.15 }}
+          initial={{ opacity: 0.1 }}
           animate={{
-            opacity: [0.08, 0.18, 0.1],
+            opacity: [0.06, 0.12, 0.08],
             x: [b.x, b.x + 20, b.x - 10, b.x],
             y: [b.y, b.y - 10, b.y + 15, b.y],
           }}
@@ -344,7 +325,7 @@ function AmbientBG() {
             width: b.size,
             height: b.size,
             background:
-              "radial-gradient(closest-side, rgba(21,195,126,0.18), rgba(21,195,126,0.0))",
+              "radial-gradient(closest-side, rgba(21,195,126,0.12), rgba(21,195,126,0.0))",
           }}
         />
       ))}
@@ -365,9 +346,9 @@ function LogoEcowatt() {
         className="shrink-0"
       >
         <path d="M10 30C10 18 22 10 38 10C38 26 30 38 18 38C13 38 10 34 10 30Z" fill="#15C37E" fillOpacity="0.9" />
-        <path d="M18 26c4-6 10-10 20-10" stroke="#E8EDF2" strokeOpacity="0.9" strokeWidth="2" strokeLinecap="round" />
+        <path d="M18 26c4-6 10-10 20-10" stroke="#0B1220" strokeOpacity="0.9" strokeWidth="2" strokeLinecap="round" />
       </svg>
-      <span className="text-sm font-medium tracking-wide text-white">Ecowatt</span>
+      <span className="text-sm font-medium tracking-wide text-neutral-900">Ecowatt</span>
     </div>
   );
 }
