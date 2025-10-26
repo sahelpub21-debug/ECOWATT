@@ -1,0 +1,373 @@
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  ArrowDown,
+  ExternalLink,
+  ChevronRight,
+  BarChart3,
+  Target,
+  Leaf,
+  FileText,
+  Users,
+  Newspaper,
+  TrendingUp,
+  LineChart,
+  CheckCircle2,
+} from "lucide-react";
+
+/**
+ * Landing page "candidature-case study" — style techno, épuré, minimal.
+ * - Stickybar minimaliste (logo Ecowatt, photo + 2 lignes, menu centré)
+ * - Hero plein écran avec illustration animée en background
+ * - Section Approach (intro + 3 colonnes + boutons placeholders)
+ * - Section Partis pris (Branding / Digital Marketing / Event & PR)
+ * - Section Management model (cadence, rôles, livrables qui vivent)
+ * - Section Success metrics (KPI)
+ *
+ * TailwindCSS requis. Framer Motion pour micro-animations. Lucide pour icônes.
+ */
+
+export default function EcowattCandidatureLanding() {
+  return (
+    <div className="min-h-screen bg-[#0B0E12] text-[#E8EDF2] selection:bg-[#15C37E]/30 selection:text-white scroll-smooth">
+      <AmbientBG />
+      <Navbar />
+      <main>
+        <Hero />
+        <Approach />
+        <PartisPris />
+        <ManagementModel />
+        <KPIs />
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+function Navbar() {
+  return (
+    <div className="fixed inset-x-0 top-0 z-40">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mt-4 rounded-2xl border border-white/5 bg-[#0F1319]/70 backdrop-blur supports-[backdrop-filter]:bg-[#0F1319]/60">
+          <nav className="flex items-center justify-between px-4 py-2">
+            {/* Gauche : Logo Ecowatt + Profil + 2 lignes */}
+            <div className="flex items-center gap-4">
+              <LogoEcowatt />
+              <span className="text-white/20">|</span>
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full bg-white/10 ring-1 ring-white/10 flex items-center justify-center text-sm font-semibold">
+                  ZG
+                </div>
+                <div className="leading-tight">
+                  <div className="text-sm font-medium">Zakaria Gallouch</div>
+                  <a
+                    href="https://ecowatt.ma" // TODO: remplacer par le lien direct de l'offre si disponible
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-[#A8B0BA] hover:text-white"
+                  >
+                    Candidature Responsable Communication Marketing
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Centre : Menu minimal */}
+            <ul className="pointer-events-auto hidden items-center gap-6 text-sm text-[#A8B0BA] md:flex">
+              <li><a href="#apercu" className="hover:text-white">Aperçu</a></li>
+              <li><a href="#approche" className="hover:text-white">Approche</a></li>
+              <li><a href="#partispris" className="hover:text-white">Partis pris</a></li>
+              <li><a href="#modele" className="hover:text-white">Modèle</a></li>
+              <li><a href="#kpi" className="hover:text-white">KPI</a></li>
+            </ul>
+
+            {/* Droite : CTA mini-audit (placeholder) */}
+            <div className="hidden md:block">
+              <a
+                href="#approche"
+                className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/90 hover:border-white/30 hover:bg-white/5"
+              >
+                Mini-audit (aperçu)
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Hero() {
+  const scrollToApproach = () => {
+    const el = document.getElementById("approche");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  return (
+    <section id="apercu" className="relative isolate flex min-h-[92vh] items-center pt-32">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        {/* gradient vignette */}
+        <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(21,195,126,0.15),transparent_60%)]" />
+      </div>
+      <div className="mx-auto mt-6 flex w-full max-w-5xl flex-col items-start gap-6 px-6 text-left">
+        <motion.h1
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-2xl font-semibold leading-tight text-white sm:text-3xl lg:text-4xl"
+        >
+          De la technique à la traction : faire du développement de la marque Ecowatt
+          un **levier de croissance** — Corporate (marque), Sales Enablement (business), PR/CSR (réputation).
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="max-w-2xl text-base text-[#A8B0BA]"
+        >
+          Traduire l’ingénierie en décisions claires — pour les clients, les partenaires et les équipes.
+        </motion.p>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+          <button
+            onClick={scrollToApproach}
+            className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white hover:border-white/30 hover:bg-white/10"
+          >
+            Découvrir
+            <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
+          </button>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function Approach() {
+  const Card = ({ icon: Icon, title, text, cta }: any) => (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.5 }}
+      className="group relative overflow-hidden rounded-2xl border border-white/5 bg-[#0F1319] p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.03)_inset] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.06)_inset]"
+    >
+      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#15C37E]/15 text-[#15C37E] ring-1 ring-[#15C37E]/20">
+        <Icon className="h-5 w-5" />
+      </div>
+      <h3 className="mb-2 text-lg font-semibold text-white">{title}</h3>
+      <p className="mb-4 text-sm leading-relaxed text-[#A8B0BA]">{text}</p>
+      <button className="inline-flex items-center gap-2 text-sm text-white/90 transition-colors hover:text-white">
+        {cta} <ChevronRight className="h-4 w-4" />
+      </button>
+      {/* halo */}
+      <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#15C37E]/10 blur-2xl transition-opacity group-hover:opacity-100" />
+    </motion.div>
+  );
+
+  return (
+    <section id="approche" className="relative z-10 scroll-mt-24 py-20">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-xl font-semibold text-white">Approach</h2>
+          <p className="mt-3 text-base text-[#A8B0BA]">
+            Nous ferons évoluer la marque pour garantir une cohérence B2B, PR et e-commerce,
+            dans une orchestration multicanale mesurable.
+          </p>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <Card
+            icon={FileText}
+            title="Audit Écosystème"
+            text="Vision sommaire PESTEL, stakeholders map, personas, preuves. Un regard clair pour agir juste."
+            cta="Voir le mini-audit"
+          />
+          <Card
+            icon={BarChart3}
+            title="Marketing funnels & multicanal"
+            text="Par pipeline : contenus, preuves, assets de closing et KPIs — pour aligner attention et opportunités."
+            cta="Voir la stratégie"
+          />
+          <Card
+            icon={Leaf}
+            title="Corporate & CSR Identity"
+            text="Message House FR/AR/EN, récits responsables, kit porte-parole, cohérence et preuves RSE."
+            cta="Voir la page"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PartisPris() {
+  const Pillar = ({ title, icon: Icon, children }: any) => (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.5 }}
+      className="rounded-2xl border border-white/5 bg-[#0F1319] p-6"
+    >
+      <div className="mb-3 flex items-center gap-3">
+        <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 text-white">
+          <Icon className="h-5 w-5" />
+        </div>
+        <h3 className="text-base font-semibold text-white">{title}</h3>
+      </div>
+      <p className="text-sm leading-relaxed text-[#A8B0BA]">{children}</p>
+    </motion.div>
+  );
+
+  return (
+    <section id="partispris" className="scroll-mt-24 py-16">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-xl font-semibold text-white">Partis pris</h2>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <Pillar title="Branding" icon={Target}>
+            La marque comme <span className="text-white">outil d’aide à la décision</span> : une promesse utile,
+            trois piliers prouvés et des messages capables de passer du chantier à la salle de réunion sans perdre en clarté.
+          </Pillar>
+          <Pillar title="Digital Marketing" icon={TrendingUp}>
+            Des parcours <span className="text-white">mesurables</span> : contenus alignés aux intentions de recherche,
+            pages qui rassurent, CTA honnêtes — pour transformer l’attention en rendez-vous qualifiés.
+          </Pillar>
+          <Pillar title="Event & PR" icon={Newspaper}>
+            Faire circuler la preuve : salons outillés, récits terrains, porte-paroles formés, et des prises de parole
+            qui lient <span className="text-white">technique</span> et <span className="text-white">impact</span> (ROI, CO₂, disponibilité).
+          </Pillar>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ManagementModel() {
+  return (
+    <section id="modele" className="scroll-mt-24 py-16">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-xl font-semibold text-white">Management model</h2>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="rounded-2xl border border-white/5 bg-[#0F1319] p-6">
+            <h3 className="mb-3 text-base font-semibold text-white">Cadence & rituels</h3>
+            <ul className="space-y-3 text-sm text-[#A8B0BA]">
+              <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 text-[#15C37E]"/> Hebdo éditorial (30’), revue pipeline MKT–Sales (30’), stand-up PR (15’).</li>
+              <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 text-[#15C37E]"/> Backlog unique, sprints de 2 semaines, décisions guidées par dashboard partagé.</li>
+              <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 text-[#15C37E]"/> Mesure systématique : contenus → MQL → SQL → Opportunités.</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-white/5 bg-[#0F1319] p-6">
+            <h3 className="mb-3 text-base font-semibold text-white">Rôles & synchronisation</h3>
+            <ul className="space-y-3 text-sm text-[#A8B0BA]">
+              <li className="flex items-start gap-2"><Users className="mt-0.5 h-4 w-4 text-[#15C37E]"/> Message House & templates = socle partagé (FR/AR/EN).</li>
+              <li className="flex items-start gap-2"><Users className="mt-0.5 h-4 w-4 text-[#15C37E]"/> Produit/Technique/Commerce co-signent les preuves. La com’ orchestre, ne sur-promet pas, outille la vente.</li>
+              <li className="flex items-start gap-2"><Users className="mt-0.5 h-4 w-4 text-[#15C37E]"/> Livrables qui vivent : Brand House 1‑page · Content Map · Battlecards · Press Kit.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function KPIs() {
+  const K = ({ label, target, hint, icon: Icon }: any) => (
+    <div className="rounded-2xl border border-white/5 bg-[#0F1319] p-6">
+      <div className="mb-4 flex items-center gap-3">
+        <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 text-white">
+          <Icon className="h-5 w-5" />
+        </div>
+        <div className="text-sm text-[#A8B0BA]">{label}</div>
+      </div>
+      <div className="text-2xl font-semibold text-white">{target}</div>
+      <div className="mt-1 text-sm text-[#A8B0BA]">{hint}</div>
+    </div>
+  );
+
+  return (
+    <section id="kpi" className="scroll-mt-24 py-16">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-xl font-semibold text-white">Success metrics</h2>
+          <p className="mt-2 text-sm text-[#A8B0BA]">
+            Ordres de grandeur de départ — à calibrer avec les historiques Analytics & CRM.
+          </p>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <K label="MQL qualifiés / mois" target="10+" hint="Formulaires, RDV, UTM" icon={LineChart} />
+          <K label="Conversion MQL → SQL" target=">= 25 %" hint="Assets d’aide à la vente" icon={TrendingUp} />
+          <K label="Cycle moyen" target="–10 à –15 %" hint="Preuves & réponses objections" icon={BarChart3} />
+          <K label="Mentions presse qualifiées" target="2 / trimestre" hint="Angles + porte‑paroles" icon={Newspaper} />
+          <K label="Pages “preuve” — temps de lecture" target="+30 %" hint="Cas & calculators" icon={FileText} />
+          <K label="Backlinks techniques de qualité" target="+5 / trimestre" hint="Tribus & kits" icon={ExternalLink} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="relative z-10 border-t border-white/5 py-10">
+      <div className="mx-auto max-w-6xl px-6 text-center text-xs text-[#A8B0BA]">
+        <div>© {new Date().getFullYear()} – Candidature · Zakaria Gallouch</div>
+      </div>
+    </footer>
+  );
+}
+
+function AmbientBG() {
+  // Quelques orbes animées très douces
+  const bubbles = [
+    { x: -300, y: -120, size: 380, delay: 0 },
+    { x: 260, y: 60, size: 300, delay: 2 },
+    { x: -80, y: 240, size: 260, delay: 4 },
+  ];
+
+  return (
+    <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      {bubbles.map((b, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0.15 }}
+          animate={{
+            opacity: [0.08, 0.18, 0.1],
+            x: [b.x, b.x + 20, b.x - 10, b.x],
+            y: [b.y, b.y - 10, b.y + 15, b.y],
+          }}
+          transition={{ duration: 18, delay: b.delay, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute rounded-full blur-3xl"
+          style={{
+            width: b.size,
+            height: b.size,
+            background:
+              "radial-gradient(closest-side, rgba(21,195,126,0.18), rgba(21,195,126,0.0))",
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
+function LogoEcowatt() {
+  // Logo minimal stylisé (feuille) — placeholder vectoriel
+  return (
+    <div className="flex items-center gap-2">
+      <svg
+        width="26"
+        height="26"
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="shrink-0"
+      >
+        <path d="M10 30C10 18 22 10 38 10C38 26 30 38 18 38C13 38 10 34 10 30Z" fill="#15C37E" fillOpacity="0.9" />
+        <path d="M18 26c4-6 10-10 20-10" stroke="#E8EDF2" strokeOpacity="0.9" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+      <span className="text-sm font-medium tracking-wide text-white">Ecowatt</span>
+    </div>
+  );
+}
