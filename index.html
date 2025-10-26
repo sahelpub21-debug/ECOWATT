@@ -1,5 +1,4 @@
-# Write the standalone HTML file to the sandbox so the user can download it
-html = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
@@ -28,8 +27,11 @@ html = """<!DOCTYPE html>
   <!-- data-links: {
         offre: '#',
         linkedin: 'https://www.linkedin.com/in/zakaria-gallouch/',
-        portfolio: '#',
-        audit: '#'
+        portfolio: 'https://sahelpub21-debug.github.io/IT_Product_Marketing/',
+        audit: '#',
+        cas_glovo: 'https://sahelpub21-debug.github.io/IT_Product_Marketing/#glovo',
+        cas_fan4all: 'https://sahelpub21-debug.github.io/IT_Product_Marketing/#fan4all',
+        cas_atda: 'https://sahelpub21-debug.github.io/IT_Product_Marketing/#atda'
   } -->
 </head>
 <body class="bg-[#F6F8FA] text-[#0B1220] font-inter selection:bg-accent/15 selection:text-[#0B1220]">
@@ -40,7 +42,7 @@ html = """<!DOCTYPE html>
     <div class="orb" style="width:260px;height:260px;left:80px;bottom:120px;animation-delay:4s"></div>
   </div>
 
-  <!-- Stickybar (inchangée) -->
+  <!-- Stickybar -->
   <header class="fixed inset-x-0 top-0 z-40">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mt-4 rounded-2xl border border-black/10 bg-white/80 glass">
@@ -70,13 +72,13 @@ html = """<!DOCTYPE html>
           <ul class="pointer-events-auto hidden items-center gap-6 text-sm text-neutral-600 md:flex">
             <li><a href="#apercu" class="hover:text-neutral-900">Aperçu</a></li>
             <li><a href="#approche" class="hover:text-neutral-900">Approche</a></li>
-            <li><a href="#partispris" class="hover:text-neutral-900">Partis pris</a></li>
+            <li><a href="#competences" class="hover:text-neutral-900">Compétences</a></li>
             <li><a href="#modele" class="hover:text-neutral-900">Modèle</a></li>
             <li><a href="#kpi" class="hover:text-neutral-900">KPI</a></li>
           </ul>
           <!-- CTA droite -->
           <div class="hidden md:block">
-            <a href="#kpi" class="rounded-full border border-black/10 px-3 py-1.5 text-xs text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">Mini‑audit (aperçu)</a>
+            <a href="#" target="_blank" rel="noreferrer" class="rounded-full border border-black/10 px-3 py-1.5 text-xs text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">Mini-audit (aperçu)</a>
           </div>
         </nav>
       </div>
@@ -95,7 +97,7 @@ html = """<!DOCTYPE html>
         <p class="max-w-xl text-base text-neutral-600">10 ans à structurer la communication de marques B2B complexes (aviation, industrie, tech). Aujourd’hui, je veux mettre cette expertise au service de la transition énergétique au Maroc.</p>
         <div class="flex gap-3">
           <a href="#approche" class="group inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">Pourquoi cette candidature <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4 transition-transform group-hover:translate-y-0.5"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg></a>
-          <a href="#" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">LinkedIn <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://www.linkedin.com/in/zakaria-gallouch/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">LinkedIn <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
         </div>
       </div>
       <!-- Placeholder visuel léger -->
@@ -115,7 +117,7 @@ html = """<!DOCTYPE html>
       <div class="grid gap-8 md:grid-cols-5">
         <div class="space-y-4 text-neutral-700 md:col-span-3">
           <p>J’ai passé 10 ans à faire parler des marques B2B dans des secteurs réputés complexes : aviation finance (ABL Corporation), technologie (CIO Mag, Dell), agriculture de précision (OCP, AgriEdge), retail international (IKEA). Des environnements où la technique est dense, les cycles longs, et où la communication doit servir le pipeline autant que la réputation.</p>
-          <p>Chez <strong>Fan4All</strong> (SportTech e‑commerce), j’ai dirigé la communication de bout en bout : positionnement, PR, social media, coordination produit‑marketing. Résultat : <strong>2.1M</strong> de reach, <strong>14.45%</strong> d’engagement LinkedIn, <strong>€100K+</strong> d’earned media value. Chez <strong>Glovo</strong> pendant les tensions géopolitiques Maroc‑Espagne, j’ai conçu et exécuté une stratégie de gestion de crise qui a transformé un risque réputationnel en actif de marque (série « Humans of Glovo » : <strong>1.3M</strong> reach, <strong>13.5K</strong> engagements).</p>
+          <p>Chez <strong>Fan4All</strong> (SportTech e-commerce), j’ai dirigé la communication de bout en bout : positionnement, PR, social media, coordination produit-marketing. Résultat : <strong>2.1M</strong> de reach, <strong>14.45%</strong> d’engagement LinkedIn, <strong>€100K+</strong> d’earned media value. Chez <strong>Glovo</strong> pendant les tensions géopolitiques Maroc-Espagne, j’ai conçu et exécuté une stratégie de gestion de crise qui a transformé un risque réputationnel en actif de marque (série « Humans of Glovo » : <strong>1.3M</strong> reach, <strong>13.5K</strong> engagements).</p>
           <p>Ce qui me motive aujourd’hui : mettre cette expertise au service d’un secteur qui compte vraiment. Ecowatt construit une infrastructure critique pour le Maroc. Votre challenge n’est pas seulement technique, il est narratif : comment faire comprendre la complexité énergétique à des décideurs pressés ? Comment aligner une équipe créative, un département commercial et des enjeux RSE dans une seule trajectoire ?</p>
           <p>C’est exactement le type de défi où j’excelle : transformer la complexité technique en messages clairs, structurer des équipes pluridisciplinaires autour d’objectifs mesurables, et faire de la communication un véritable levier de croissance.</p>
         </div>
@@ -128,57 +130,89 @@ html = """<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- 02 — Compétences -->
-  <section id="partispris" class="scroll-mt-24 py-16">
+  <!-- 02 — Compétences + Case studies rattachés -->
+  <section id="competences" class="scroll-mt-24 py-16">
     <div class="mx-auto max-w-6xl px-6">
       <header class="mb-8">
         <div class="text-xs uppercase tracking-wide text-neutral-500">02 — Compétences</div>
         <h2 class="mt-2 text-xl font-semibold text-neutral-900">Ce que j’apporte à Ecowatt</h2>
-        <p class="mt-2 max-w-3xl text-sm text-neutral-600">Une expertise éprouvée en coordination multipartite, gouvernance de contenu et marketing data‑driven, appliquée à des environnements B2B complexes.</p>
+        <p class="mt-2 max-w-3xl text-sm text-neutral-600">Coordination multipartite, gouvernance de contenu et marketing data-driven — appliqués à des environnements B2B techniques.</p>
       </header>
+
       <div class="grid gap-6 md:grid-cols-3">
-        <!-- Skill 1 -->
+        <!-- Stratégie de marque & positionnement -->
         <div class="rounded-2xl border border-black/10 bg-white p-6">
           <div class="mb-3 flex items-center gap-3">
             <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-neutral-900/5 text-neutral-900">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><circle cx="12" cy="12" r="9"/><path d="M12 7v10"/><path d="M7 12h10"/></svg>
+              <!-- Target icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10"/><path d="M7 12h10"/></svg>
             </div>
-            <h3 class="text-base font-semibold text-neutral-900">Clarté stratégique & positionnement</h3>
+            <h3 class="text-base font-semibold text-neutral-900">Stratégie de marque & positionnement</h3>
           </div>
-          <p class="text-sm leading-relaxed text-neutral-600">Définir ce qui fait la différence : cartographie des parties prenantes, personas décisionnels, Message House. Traduire la technique en valeur client.</p>
-          <div class="mt-4 rounded-xl border border-black/10 bg-neutral-50 p-4 text-sm text-neutral-700">
-            <div class="mb-1 font-medium text-neutral-900">Exemple · ABL Corporation</div>
-            <p>Structuration de 4 stratégies brand content (aviation finance, botanicals, hospitality, real estate). 30+ articles de thought leadership, roadmaps éditoriales 6 mois.</p>
+          <p class="text-sm leading-relaxed text-neutral-600">Mettre la marque au service des décisions : message house clair, preuves alignées et architecture lisible pour des cycles de vente exigeants.</p>
+
+          <!-- Case study: Glovo (crisis comms) -->
+          <div class="mt-5 rounded-xl border border-black/10 bg-neutral-50 p-4">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="text-sm font-medium text-neutral-900">Glovo — Crisis comms</div>
+                <p class="mt-1 text-sm text-neutral-700">Gestion de crise Marocco-Espagne : narration unifiée, validation multi-équipes, série “Humans of Glovo” — risque transformé en actif de marque.</p>
+              </div>
+              <a href="https://sahelpub21-debug.github.io/IT_Product_Marketing/#glovo" target="_blank" rel="noreferrer" class="shrink-0 inline-flex items-center gap-1 rounded-full border border-black/10 bg-white px-3 py-1.5 text-xs text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">Ouvrir le cas <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg></a>
+            </div>
           </div>
         </div>
-        <!-- Skill 2 -->
+
+        <!-- Marketing digital & contenu -->
         <div class="rounded-2xl border border-black/10 bg-white p-6">
           <div class="mb-3 flex items-center gap-3">
             <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-neutral-900/5 text-neutral-900">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>
+              <!-- BarChart icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>
             </div>
-            <h3 class="text-base font-semibold text-neutral-900">Marketing opérationnel & contenus</h3>
+            <h3 class="text-base font-semibold text-neutral-900">Marketing digital & contenu</h3>
           </div>
-          <p class="text-sm leading-relaxed text-neutral-600">Des contenus qui servent le pipeline : assets d’aide à la vente, parcours SEO, campagnes multicanales. Du brief à la mesure.</p>
-          <div class="mt-4 rounded-xl border border-black/10 bg-neutral-50 p-4 text-sm text-neutral-700">
-            <div class="mb-1 font-medium text-neutral-900">Exemple · Fan4All</div>
-            <p>Direction communication complète : 2.1M reach cumulé, 14.45% engagement LinkedIn, €100K+ earned media. Coordination produit‑marketing‑digital.</p>
+          <p class="text-sm leading-relaxed text-neutral-600">Concevoir des contenus qui servent le pipeline : parcours SEO→activation, assets d’aide à la vente, campagnes mesurées.</p>
+
+          <!-- Case study: Fan4All -->
+          <div class="mt-5 rounded-xl border border-black/10 bg-neutral-50 p-4">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="text-sm font-medium text-neutral-900">Fan4All — Sportech marketplace</div>
+                <p class="mt-1 text-sm text-neutral-700">Orchestration produit-marketing, social & earned media : 2.1M reach, 14.45% engagement LinkedIn, €100K+ EMV.</p>
+              </div>
+              <a href="https://sahelpub21-debug.github.io/IT_Product_Marketing/#fan4all" target="_blank" rel="noreferrer" class="shrink-0 inline-flex items-center gap-1 rounded-full border border-black/10 bg-white px-3 py-1.5 text-xs text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">Ouvrir le cas <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg></a>
+            </div>
           </div>
         </div>
-        <!-- Skill 3 -->
+
+        <!-- Communication événementielle & RP -->
         <div class="rounded-2xl border border-black/10 bg-white p-6">
           <div class="mb-3 flex items-center gap-3">
             <div class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-neutral-900/5 text-neutral-900">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><path d="M17 21v-8H7v8"/><path d="M7 8V3h10v5"/></svg>
+              <!-- Newspaper icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M8 10h8M8 14h5"/><path d="M4 18V6a2 2 0 0 1 2-2h14"/></svg>
             </div>
-            <h3 class="text-base font-semibold text-neutral-900">Équipe & gouvernance de contenu</h3>
+            <h3 class="text-base font-semibold text-neutral-900">Communication événementielle & RP</h3>
           </div>
-          <p class="text-sm leading-relaxed text-neutral-600">Coordination d’équipes créatives, rituels clairs, workflows structurés. Dashboard partagé pour aligner commerce, technique et communication.</p>
-          <div class="mt-4 rounded-xl border border-black/10 bg-neutral-50 p-4 text-sm text-neutral-700">
-            <div class="mb-1 font-medium text-neutral-900">Exemple · Glovo Morocco</div>
-            <p>E‑réputation end‑to‑end : monitoring, reporting, plans d’action, série vidéo « Humans of Glovo » (1.3M reach) en période de crise géopolitique.</p>
+          <p class="text-sm leading-relaxed text-neutral-600">Faire circuler la preuve : angles, porte-paroles, dispositifs salons — pour lier technique, usage et impact.</p>
+
+          <!-- Case study: ATDA -->
+          <div class="mt-5 rounded-xl border border-black/10 bg-neutral-50 p-4">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="text-sm font-medium text-neutral-900">ATDA — African Technology & Digital Awards</div>
+                <p class="mt-1 text-sm text-neutral-700">Dispositif RP & event : programmation éditoriale, coordination speakers, retombées presse ciblées.</p>
+              </div>
+              <a href="https://sahelpub21-debug.github.io/IT_Product_Marketing/#atda" target="_blank" rel="noreferrer" class="shrink-0 inline-flex items-center gap-1 rounded-full border border-black/10 bg-white px-3 py-1.5 text-xs text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">Ouvrir le cas <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg></a>
+            </div>
           </div>
         </div>
+      </div>
+
+      <!-- Lien vers d'autres cases -->
+      <div class="mt-8 flex items-center justify-center">
+        <a href="https://sahelpub21-debug.github.io/IT_Product_Marketing/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">Voir d’autres case studies <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/><path d="M15 12H3"/></svg></a>
       </div>
     </div>
   </section>
@@ -194,12 +228,12 @@ html = """<!DOCTYPE html>
         <div class="rounded-2xl border border-black/10 bg-white p-6">
           <div class="mb-1 text-xs uppercase tracking-wide text-neutral-500">Étape 1</div>
           <h3 class="text-base font-semibold text-neutral-900">Rituels & cadence</h3>
-          <p class="mt-2 text-sm leading-relaxed text-neutral-600">Hebdo éditorial (30’), revue pipeline Marketing–Sales (30’), stand‑up PR (15’). Un backlog unique, des sprints de 2 semaines, décisions guidées par un dashboard partagé.</p>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600">Hebdo éditorial (30’), revue pipeline Marketing–Sales (30’), stand-up PR (15’). Un backlog unique, des sprints de 2 semaines, décisions guidées par un dashboard partagé.</p>
         </div>
         <div class="rounded-2xl border border-black/10 bg-white p-6">
           <div class="mb-1 text-xs uppercase tracking-wide text-neutral-500">Étape 2</div>
           <h3 class="text-base font-semibold text-neutral-900">Synchronisation équipes</h3>
-          <p class="mt-2 text-sm leading-relaxed text-neutral-600">Message House et templates comme socle commun (FR/AR/EN). Produit/Technique/Commerce co‑signent les preuves ; la communication orchestre, ne sur‑promet pas et outille la vente.</p>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-600">Message House et templates comme socle commun (FR/AR/EN). Produit/Technique/Commerce co-signent les preuves ; la communication orchestre, ne sur-promet pas et outille la vente.</p>
         </div>
         <div class="rounded-2xl border border-black/10 bg-white p-6">
           <div class="mb-1 text-xs uppercase tracking-wide text-neutral-500">Étape 3</div>
@@ -210,7 +244,7 @@ html = """<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- KPI + mini‑audit + liens -->
+  <!-- KPI + mini-audit + liens -->
   <section id="kpi" class="scroll-mt-24 py-16">
     <div class="mx-auto max-w-6xl px-6">
       <header class="mb-8">
@@ -238,14 +272,14 @@ html = """<!DOCTYPE html>
       <div class="mt-12 grid gap-6 md:grid-cols-5">
         <div class="md:col-span-3">
           <div class="text-sm font-medium text-neutral-900">J’ai commencé à analyser votre écosystème</div>
-          <p class="mt-2 text-sm text-neutral-600">Pour préparer cette candidature, j’ai réalisé un mini‑audit d’Ecowatt : positionnement, concurrence, parties prenantes, communication actuelle. Un aperçu de ma compréhension de vos enjeux.</p>
+          <p class="mt-2 text-sm text-neutral-600">Pour préparer cette candidature, j’ai réalisé un mini-audit d’Ecowatt : positionnement, concurrence, parties prenantes, communication actuelle. Un aperçu de ma compréhension de vos enjeux.</p>
           <div class="mt-4">
-            <a href="#" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">Voir le mini‑audit <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="m9 18 6-6-6-6"/><path d="M15 12H3"/></svg></a>
+            <a href="#" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">Voir le mini-audit <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="m9 18 6-6-6-6"/><path d="M15 12H3"/></svg></a>
           </div>
         </div>
         <div class="md:col-span-2">
           <figure class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-black/10 bg-white ph">
-            <figcaption class="absolute bottom-3 left-3 rounded-full border border-black/10 bg-white/90 px-3 py-1 text-xs text-neutral-600">Couverture mini‑audit / schéma PESTEL</figcaption>
+            <figcaption class="absolute bottom-3 left-3 rounded-full border border-black/10 bg-white/90 px-3 py-1 text-xs text-neutral-600">Couverture mini-audit / schéma PESTEL</figcaption>
           </figure>
         </div>
       </div>
@@ -253,9 +287,9 @@ html = """<!DOCTYPE html>
       <div class="mt-12 rounded-2xl border border-black/10 bg-white p-6">
         <div class="mb-4 text-sm font-medium text-neutral-900">Ressources</div>
         <div class="flex flex-wrap gap-3">
-          <a href="#" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M3 7h18"/><path d="M3 12h18"/><path d="M3 17h18"/></svg> Case studies</a>
+          <a href="https://sahelpub21-debug.github.io/IT_Product_Marketing/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M3 7h18"/><path d="M3 12h18"/><path d="M3 17h18"/></svg> Case studies</a>
           <a href="#" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg> Offre d’emploi</a>
-          <a href="#" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn</a>
+          <a href="https://www.linkedin.com/in/zakaria-gallouch/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn</a>
           <a href="#" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Note d’intention</a>
         </div>
       </div>
@@ -269,7 +303,3 @@ html = """<!DOCTYPE html>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-"""
-with open("/mnt/data/ecowatt-narrative-landing.html", "w", encoding="utf-8") as f:
-    f.write(html)
-print("Saved to /mnt/data/ecowatt-narrative-landing.html")
