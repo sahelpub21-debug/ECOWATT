@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
@@ -50,16 +50,15 @@
 
           <!-- Menu -->
           <ul class="hidden md:flex items-center gap-6 text-sm text-neutral-600">
-            <li><a href="#top" class="hover:text-neutral-900">Top ↑</a></li>
+            <li><a href="#top" class="hover:text-neutral-900">Home ↑</a></li>
             <li><a href="#manifeste" class="hover:text-neutral-900">Motivations</a></li>
             <li><a href="#competences" class="hover:text-neutral-900">Compétences</a></li>
+            <li><a href="#references" class="hover:text-neutral-900">Références</a></li>
             <li><a href="#approche" class="hover:text-neutral-900">Background & approche</a></li>
           </ul>
 
-          <!-- CTA -->
-          <div class="hidden md:block">
-            <a href="https://calendly.com/gallouch-zakaria/30-min-consultation" target="_blank" rel="noreferrer" class="rounded-full border border-black/10 px-3 py-1.5 text-xs text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">Planifier un entretien</a>
-          </div>
+          <!-- CTA (rien à ajouter ici) -->
+          <div class="hidden md:block"></div>
         </nav>
       </div>
     </div>
@@ -71,42 +70,55 @@
       <div class="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(21,195,126,0.08),transparent_60%)]"></div>
     </div>
 
-    <div class="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-8 px-6 sm:grid-cols-2">
+    <div class="mx-auto grid w-full max-w-6xl grid-cols-1 items-start gap-8 px-6 sm:grid-cols-2">
+      <!-- Texte -->
       <div class="flex flex-col items-start gap-5">
         <h1 class="text-2xl font-semibold leading-tight text-neutral-900 sm:text-3xl lg:text-4xl">Donner sens à un parcours, servir une mission</h1>
         <p class="max-w-xl text-base text-neutral-700">
-          Rejoindre Ecowatt dans une phase clé de son développement, c’est donner une continuité à un parcours façonné par la communication B2B, les relations presse et le marketing digital, des terrains où j’ai appris à relier la précision technique à une vision claire et partagée.
+          Rejoindre Ecowatt dans une phase clé de son développement, c’est donner une continuité à un parcours façonné par la communication B2B,
+          les relations presse et le marketing digital, des terrains où j’ai appris à relier la précision technique à une vision claire et partagée.
         </p>
 
-        <!-- Insights compacts -->
-        <ul class="flex flex-wrap gap-2 text-xs text-neutral-700">
-          <li class="rounded-full border border-black/10 bg-white px-3 py-1">+6 ans en environnement agence</li>
-          <li class="rounded-full border border-black/10 bg-white px-3 py-1">3 ans Head of Comms</li>
-          <li class="rounded-full border border-black/10 bg-white px-3 py-1">30+ marques accompagnées</li>
-          <li class="rounded-full border border-black/10 bg-white px-3 py-1">+20 secteurs & verticales</li>
-        </ul>
-
-        <div class="flex flex-wrap gap-3">
-          <a href="#manifeste" class="group inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">
-            Lettre de motivation
-            <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4 transition-transform group-hover:translate-y-0.5" stroke="currentColor" stroke-width="2"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
-          </a>
-          <a href="https://calendly.com/gallouch-zakaria/30-min-consultation" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">
-            Planifier un entretien
-            <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
-          </a>
+        <!-- Insights -> mini dashboard compact (plus des "boutons") -->
+        <div class="mt-1 w-full">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="rounded-xl border border-black/10 bg-white p-3">
+              <div class="text-[10px] uppercase tracking-wide text-neutral-500">Exp. agence</div>
+              <div class="mt-0.5 text-sm font-medium text-neutral-900">+6 ans</div>
+            </div>
+            <div class="rounded-xl border border-black/10 bg-white p-3">
+              <div class="text-[10px] uppercase tracking-wide text-neutral-500">Head of Comms</div>
+              <div class="mt-0.5 text-sm font-medium text-neutral-900">3 ans</div>
+            </div>
+            <div class="rounded-xl border border-black/10 bg-white p-3">
+              <div class="text-[10px] uppercase tracking-wide text-neutral-500">Marques</div>
+              <div class="mt-0.5 text-sm font-medium text-neutral-900">30+</div>
+            </div>
+            <div class="rounded-xl border border-black/10 bg-white p-3">
+              <div class="text-[10px] uppercase tracking-wide text-neutral-500">Secteurs</div>
+              <div class="mt-0.5 text-sm font-medium text-neutral-900">20+</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Visuel Hero : image plus compacte -->
+      <!-- Image plus compacte -->
       <figure class="relative w-full overflow-hidden rounded-2xl border border-black/10 bg-white max-w-md ml-auto">
-        <img 
-          src="Site_centrale_r%C3%A9seau_(placeholder).jpeg" 
-          alt="Énergie & réseau — Maroc" 
-          class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover"
+        <img
+          src="Site_centrale_r%C3%A9seau_(placeholder).jpeg"
+          alt="Énergie & réseau — Maroc"
+          class="w-full h-40 sm:h-48 md:h-52 object-cover"
           loading="eager"
         />
       </figure>
+    </div>
+
+    <!-- Bouton unique centré en bas de section -->
+    <div class="mt-8 flex justify-center pb-6">
+      <a href="#manifeste" class="group inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-5 py-2.5 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">
+        Lettre de motivation
+        <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4 transition-transform group-hover:translate-y-0.5" stroke="currentColor" stroke-width="2"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+      </a>
     </div>
   </section>
 
@@ -116,29 +128,53 @@
       <div class="text-xs uppercase tracking-wide text-neutral-500">01 — Motivations</div>
       <h2 class="mt-2 text-xl font-semibold text-neutral-900">Le fil d’un parcours et d’une conviction</h2>
 
-      <div class="mt-4 space-y-4 leading-relaxed text-neutral-700">
-        <p>Mon parcours m’a toujours conduit là où la technique rencontre la communication. D’abord dans des environnements exigeants, où il fallait rendre lisibles des produits complexes. Puis dans des missions où la cohérence entre réputation, croissance et impact faisait la différence.</p>
-        <p>L’écosystème énergétique marocain vit aujourd’hui une phase passionnante : des acteurs comme Ecowatt prouvent qu’innovation et souveraineté énergétique peuvent avancer ensemble. C’est cette dynamique qui me séduit : celle d’une entreprise jeune, ancrée dans son territoire, mais engagée dans une croissance qui se déploie désormais à l’échelle nationale. Ce cadre correspond pleinement aux perspectives de carrière dans lesquelles je souhaite m’inscrire aujourd’hui.</p>
-        <p>Mon expérience en communication B2B, relations presse et marketing digital me conforte dans cette ambition : structurer les messages, soutenir les ventes, rendre visibles les preuves de performance et installer une marque de confiance dans la durée.</p>
-        <p>Ce poste représente pour moi une continuité logique : contribuer à une aventure qui relie savoir-faire technique, narration claire et impact collectif.</p>
+      <div class="mt-5 space-y-5 leading-relaxed text-neutral-700">
+        <p><strong>Mon parcours</strong> m’a toujours conduit là où la technique rencontre la communication. D’abord dans des environnements exigeants, où il fallait <strong>rendre lisibles des produits complexes</strong>. Puis dans des missions où la cohérence entre réputation, croissance et impact faisait la différence.</p>
+        <p>L’écosystème énergétique marocain vit aujourd’hui une phase passionnante : des acteurs comme <strong>Ecowatt</strong> prouvent qu’<strong>innovation</strong> et <strong>souveraineté énergétique</strong> peuvent avancer ensemble. C’est cette dynamique qui me séduit : celle d’une entreprise jeune, ancrée dans son territoire, mais engagée dans une <strong>croissance nationale</strong>. Ce cadre correspond pleinement aux perspectives de carrière dans lesquelles je souhaite m’inscrire aujourd’hui.</p>
+        <p>Mon expérience en <strong>communication B2B</strong>, relations presse et marketing digital me conforte dans cette ambition : structurer les messages, soutenir les ventes, rendre visibles les preuves de performance et installer une marque de confiance dans la durée.</p>
+        <p>Ce poste représente pour moi une continuité logique : contribuer à une aventure qui relie savoir-faire technique, <strong>narration claire</strong> et impact collectif au service de la <strong>transition énergétique</strong>.</p>
       </div>
     </div>
   </section>
 
-  <!-- 02 — Compétences / Case studies -->
-  <section id="competences" class="scroll-mt-24 py-12">
+  <!-- 02 — Références (Compétences + Case studies) -->
+  <section id="references" class="scroll-mt-24 py-12">
     <div class="mx-auto max-w-6xl px-6">
       <header class="mb-8">
         <div class="text-xs uppercase tracking-wide text-neutral-500">02 — Références</div>
-        <h2 class="mt-2 text-xl font-semibold text-neutral-900">Sélection de cas B2B</h2>
+        <h2 class="mt-2 text-xl font-semibold text-neutral-900">Compétences & sélection de case studies</h2>
       </header>
+
+      <!-- Compétences -->
+      <div id="competences" class="mb-10 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-black/10 bg-white p-6">
+          <div class="text-[11px] uppercase tracking-wide text-neutral-500 mb-1">Compétence</div>
+          <h3 class="text-base font-semibold text-neutral-900">Stratégie & positionnement</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-700">Clarifier la proposition de valeur, structurer le message house, aligner preuves & segments pour servir la conversion et la crédibilité.</p>
+        </div>
+        <div class="rounded-2xl border border-black/10 bg-white p-6">
+          <div class="text-[11px] uppercase tracking-wide text-neutral-500 mb-1">Compétence</div>
+          <h3 class="text-base font-semibold text-neutral-900">Communication & RP</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-700">Pilotage éditorial, porte-parole, press-room, influence LinkedIn : de la prise de parole aux retombées qualifiées.</p>
+        </div>
+        <div class="rounded-2xl border border-black/10 bg-white p-6">
+          <div class="text-[11px] uppercase tracking-wide text-neutral-500 mb-1">Compétence</div>
+          <h3 class="text-base font-semibold text-neutral-900">Marketing digital & contenu</h3>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-700">Parcours SEO→activation, assets d’aide à la vente, gouvernance éditoriale et mesure pour des contenus utiles.</p>
+        </div>
+      </div>
+
+      <!-- Case studies -->
+      <div class="mb-3">
+        <h3 class="text-lg font-semibold text-neutral-900">Sélection de case studies</h3>
+      </div>
 
       <div class="grid gap-6 md:grid-cols-3 items-stretch">
         <!-- Fan4All -->
         <article class="h-full rounded-2xl border border-black/10 bg-white p-6 flex flex-col">
-          <h3 class="text-base font-semibold text-neutral-900">Fan4All — Marketplace SportTech</h3>
+          <h4 class="text-base font-semibold text-neutral-900">Fan4All — Marketplace SportTech</h4>
           <p class="mt-2 text-sm leading-[1.8] text-neutral-700 justify-text">
-            Repositionnement de l’offre de la marketplace, en passant d’un univers « passion foot » à un créneau lifestyle plus fédérateur, tout en renforçant la communication B2B. Le dispositif a intégré l’étude des personas, le benchmark concurrentiel, l’optimisation de l’expérience utilisateur et la conception de funnels de content marketing, soutenus par une stratégie RP générant plus de <strong>€300K de PR Value</strong>. <em>(Résultat organique sur le marché FR, piloté à distance depuis le Maroc — start-up en phase de lancement)</em>.
+            Repositionnement de l’offre de la marketplace, en passant d’un univers « passion foot » à un créneau lifestyle plus fédérateur, tout en renforçant la communication B2B. Le dispositif a intégré l’étude des personas, le benchmark concurrentiel, l’optimisation de l’expérience utilisateur et la conception de funnels de content marketing, soutenus par une stratégie RP générant plus de <strong>€300K de PR Value</strong>. <em>(Résultat organique sur le marché FR, piloté à distance depuis le Maroc — start-up en phase de lancement.)</em>
           </p>
           <figure class="mt-4 w-full aspect-[16/9] overflow-hidden rounded-xl border border-black/10 bg-white">
             <img src="Fan4all_case_study.jpeg" alt="Fan4All — Repositionnement & RP" class="h-full w-full object-cover"/>
@@ -147,9 +183,9 @@
 
         <!-- Glovo -->
         <article class="h-full rounded-2xl border border-black/10 bg-white p-6 flex flex-col">
-          <h3 class="text-base font-semibold text-neutral-900">Glovo — Cellule de veille & contenu</h3>
+          <h4 class="text-base font-semibold text-neutral-900">Glovo — Cellule de veille & contenu</h4>
           <p class="mt-2 text-sm leading-[1.8] text-neutral-700 justify-text">
-            J’ai structuré chez Glovo une cellule de veille communication et marché pour mieux relier insights, réputation et action éditoriale. C’est dans ce cadre qu’a émergé la série « Humans of Glovo », conçue en réponse aux tensions diplomatiques entre le Maroc et l’Espagne, afin de réaffirmer l’ancrage marocain de la marque et préserver sa crédibilité publique.
+            J’ai structuré chez Glovo une cellule de veille communication et marché pour relier plus finement insights, réputation et action éditoriale. Sur cette base, nous avons conçu la série « Humans of Glovo » en réponse aux tensions diplomatiques entre le Maroc et l’Espagne, afin de réaffirmer l’ancrage marocain de la marque et préserver sa crédibilité publique. Le dispositif a permis d’orienter la conversation vers l’humain, d’outiller les prises de parole et de consolider la confiance dans un contexte sensible.
           </p>
           <figure class="mt-4 w-full aspect-[16/9] overflow-hidden rounded-xl border border-black/10 bg-white">
             <img src="Glovo_Case%20Study.png" alt="Glovo — Humans of Glovo" class="h-full w-full object-cover"/>
@@ -158,9 +194,9 @@
 
         <!-- ATDA -->
         <article class="h-full rounded-2xl border border-black/10 bg-white p-6 flex flex-col">
-          <h3 class="text-base font-semibold text-neutral-900">ATDA — Assises africaines de la transformation digitale</h3>
+          <h4 class="text-base font-semibold text-neutral-900">ATDA — Assises africaines de la transformation digitale</h4>
           <p class="mt-2 text-sm leading-[1.8] text-neutral-700 justify-text">
-            En amont des ATDA, j’ai piloté la stratégie de communication et de relations presse, en m’appuyant sur une communauté d’influenceurs africains actifs sur LinkedIn — décideurs, entrepreneurs et acteurs de la tech. Ce travail s’est prolongé par la production d’un documentaire transformé en série de capsules courtes, <em>Rêve d’Afrique</em>, qui a prolongé la conversation autour de l’innovation panafricaine.
+            En amont des ATDA, j’ai piloté la stratégie de communication et de relations presse en m’appuyant sur une communauté d’influenceurs africains actifs sur LinkedIn — décideurs, entrepreneurs et acteurs de la tech. Nous avons prolongé l’initiative par la production d’un documentaire transformé en série de capsules courtes, <em>Rêve d’Afrique</em>, pour valoriser des voix panafricaines et maintenir l’attention dans la durée. L’approche a renforcé la portée organique, la qualité des mentions et la cohérence éditoriale autour de l’événement.
           </p>
           <figure class="mt-4 w-full aspect-[16/9] overflow-hidden rounded-xl border border-black/10 bg-white">
             <img src="ATDA_Case_study.jpg" alt="ATDA — RP & capsules vidéo" class="h-full w-full object-cover"/>
@@ -195,33 +231,18 @@
           <p class="mt-2 text-sm leading-relaxed text-neutral-700">Interface claire entre stratégie et opérationnel : comprendre vite, aligner les équipes, livrer avec précision.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="mt-8 rounded-2xl border border-black/10 bg-white p-6 text-center">
-        <p class="text-sm text-neutral-700">Que vous structuriez un nouveau positionnement produit, lanciez une campagne multicanale ou cherchiez à professionnaliser votre fonction marketing, je reste à disposition pour échanger sur vos besoins.</p>
+  <!-- CTA final -->
+  <section class="pb-12">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="rounded-2xl border border-black/10 bg-white p-6 text-center">
+        <p class="text-sm text-neutral-700">Je serais heureux d’échanger sur la manière dont mon profil peut répondre à vos besoins.</p>
         <div class="mt-4">
           <a href="https://calendly.com/gallouch-zakaria/30-min-consultation" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">
             Planifier un échange
             <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Ressources (optionnel : conservé) -->
-  <section class="pb-12">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="rounded-2xl border border-black/10 bg-white p-6">
-        <div class="mb-4 text-sm font-medium text-neutral-900">Ressources</div>
-        <div class="flex flex-wrap gap-3">
-          <a href="https://sahelpub21-debug.github.io/Fanforall/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5">
-            Case studies complémentaires
-          </a>
-          <a href="https://ecowatt.ma/careers/responsable-marketing-et-communication" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5">
-            Offre d’emploi
-          </a>
-          <a href="https://www.linkedin.com/in/zakaria-gallouch/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5">
-            LinkedIn
           </a>
         </div>
       </div>
