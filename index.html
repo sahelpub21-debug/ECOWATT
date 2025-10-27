@@ -19,43 +19,29 @@
   <style>
     html{scroll-behavior:smooth}
     .glass{backdrop-filter:saturate(160%) blur(10px);-webkit-backdrop-filter:saturate(160%) blur(10px)}
-    .orb{position:absolute;border-radius:9999px;filter:blur(28px);background:radial-gradient(closest-side,rgba(21,195,126,.12),rgba(21,195,126,0))}
     .ph{background:repeating-linear-gradient(45deg,rgba(21,195,126,.08) 0 6px,rgba(21,195,126,.04) 6px 12px)}
-    .justify-text{ text-align: justify; }
+    .justify-text{text-align:justify}
   </style>
 </head>
 <body class="bg-[#F6F8FA] text-[#0B1220] font-inter selection:bg-accent/15 selection:text-[#0B1220]">
-
-  <!-- Orbes d’ambiance -->
-  <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-    <div class="orb" style="width:380px;height:380px;left:-300px;top:-120px;opacity:.08"></div>
-    <div class="orb" style="width:300px;height:300px;right:260px;top:60px;opacity:.10"></div>
-    <div class="orb" style="width:260px;height:260px;left:80px;bottom:120px;opacity:.08"></div>
-  </div>
 
   <!-- Stickybar -->
   <header class="fixed inset-x-0 top-0 z-40">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mt-4 rounded-2xl border border-black/10 bg-white/80 glass">
         <nav class="flex items-center justify-between px-4 py-2">
-          <!-- Gauche : logo + profil -->
+          <!-- Gauche : logo + profil + 2 lignes -->
           <div class="flex items-center gap-4">
             <div class="flex items-center gap-2">
-              <svg width="26" height="26" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0">
-                <path d="M10 30C10 18 22 10 38 10C38 26 30 38 18 38C13 38 10 34 10 30Z" fill="#15C37E" fill-opacity="0.9"/>
-                <path d="M18 26c4-6 10-10 20-10" stroke="#0B1220" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+              <img src="logoecowatt.png" alt="Ecowatt logo" class="h-6 w-auto"/>
               <span class="text-sm font-medium tracking-wide">Ecowatt</span>
             </div>
             <span class="text-neutral-900/20">|</span>
             <div class="flex items-center gap-3">
-              <div class="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-neutral-900/5 ring-1 ring-black/10 text-sm font-semibold">ZG</div>
+              <img src="photo_profil zakaria_gallouch.png" alt="Zakaria Gallouch" class="h-10 w-10 rounded-full object-cover ring-1 ring-black/10"/>
               <div class="leading-tight">
                 <a href="https://www.linkedin.com/in/zakaria-gallouch/" target="_blank" rel="noreferrer" class="text-sm font-medium text-neutral-900 hover:underline">Zakaria Gallouch</a>
-                <a href="https://ecowatt.ma/" target="_blank" rel="noreferrer" class="block inline-flex items-center gap-1 text-xs text-neutral-600 hover:text-neutral-900">
-                  Candidature Responsable Communication Marketing
-                  <svg viewBox="0 0 24 24" fill="none" class="h-3 w-3" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
-                </a>
+                <a href="https://ecowatt.ma/careers/responsable-marketing-et-communication" target="_blank" rel="noreferrer" class="block text-xs text-neutral-600 hover:text-neutral-900">Candidature Responsable Communication Marketing</a>
               </div>
             </div>
           </div>
@@ -71,14 +57,14 @@
 
           <!-- CTA -->
           <div class="hidden md:block">
-            <a href="#mini-audit" class="rounded-full border border-black/10 px-3 py-1.5 text-xs text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">Mini-audit (aperçu)</a>
+            <a href="https://calendly.com/gallouch-zakaria/30-min-consultation" target="_blank" rel="noreferrer" class="rounded-full border border-black/10 px-3 py-1.5 text-xs text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">Planifier un entretien</a>
           </div>
         </nav>
       </div>
     </div>
   </header>
 
-  <!-- Hero (espaces réduits) -->
+  <!-- Hero -->
   <section id="apercu" class="relative isolate min-h-[78vh] pt-24">
     <div class="pointer-events-none absolute inset-0 -z-10">
       <div class="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(21,195,126,0.08),transparent_60%)]"></div>
@@ -94,19 +80,21 @@
             Pourquoi cette candidature
             <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4 transition-transform group-hover:translate-y-0.5" stroke="currentColor" stroke-width="2"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
           </a>
-          <a href="#" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">
+          <a href="https://calendly.com/gallouch-zakaria/30-min-consultation" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">
             Planifier un entretien
             <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
           </a>
         </div>
       </div>
-      <figure class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-black/10 bg-white ph">
-        <figcaption class="absolute bottom-3 left-3 rounded-full border border-black/10 bg-white/90 px-3 py-1 text-xs text-neutral-600">Énergie · Maroc · Solaire & intégration réseau</figcaption>
+
+      <!-- Visuel : photo de profil circulaire -->
+      <figure class="relative w-full flex items-center justify-center">
+        <img src="photo_profil zakaria_gallouch.png" alt="Zakaria Gallouch" class="h-56 w-56 rounded-full object-cover ring-1 ring-black/10"/>
       </figure>
     </div>
   </section>
 
-  <!-- 01 — Contexte (top padding réduit) -->
+  <!-- 01 — Contexte -->
   <section id="approche" class="relative z-10 scroll-mt-24 pt-10 pb-16">
     <div class="mx-auto max-w-6xl px-6">
       <header class="mb-8">
@@ -121,8 +109,9 @@
           <p>C’est exactement le type de défi où j’excelle : transformer la complexité technique en messages clairs, structurer des équipes pluridisciplinaires autour d’objectifs mesurables, et faire de la communication un véritable levier de croissance.</p>
         </div>
         <div class="md:col-span-2">
-          <figure class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl border border-black/10 bg-white ph">
-            <figcaption class="absolute bottom-3 left-3 rounded-full border border-black/10 bg-white/90 px-3 py-1 text-xs text-neutral-600">Site / centrale / réseau (placeholder)</figcaption>
+          <!-- Image carrée/rectangulaire -->
+          <figure class="relative w-full aspect-[4/3] overflow-hidden rounded-2xl border border-black/10 bg-white">
+            <img src="Site centrale réseau (placeholder).jpeg" alt="Contexte énergie — Maroc" class="h-full w-full object-cover"/>
           </figure>
         </div>
       </div>
@@ -144,12 +133,13 @@
           <div class="text-[11px] uppercase tracking-wide text-neutral-500 mb-2">Compétence</div>
           <h3 class="text-base font-semibold text-neutral-900">Stratégie de marque & positionnement</h3>
           <p class="mt-2 text-sm leading-[1.8] text-neutral-600 justify-text">Clarifier ce qui fait la différence : message house, preuves alignées et architecture de marque lisible pour des cycles de vente exigeants.</p>
-          <figure class="mt-4 w-full aspect-[16/9] rounded-xl border border-black/10 bg-white ph flex items-center justify-center">
-            <span class="text-[12px] text-neutral-500">Image Placeholder</span>
+          <figure class="mt-4 w-full aspect-[16/9] overflow-hidden rounded-xl border border-black/10 bg-white">
+            <img src="Glovo_Case%20Study.png" alt="Glovo — Crisis comms" class="h-full w-full object-cover"/>
           </figure>
           <div class="mt-4 rounded-xl border border-black/10 bg-neutral-50 p-4 text-sm">
             <div class="font-medium text-neutral-900">Glovo — Crisis comms</div>
-            <p class="mt-1 text-neutral-700 leading-[1.8] justify-text">Contexte Maroc–Espagne tendu. Dispositif de gestion de crise structuré : messages validés multi-équipes, porte-paroles outillés, série « Humans of Glovo ». Résultat : risque réputationnel converti en actif de marque. <a href="https://sahelpub21-debug.github.io/IT_Product_Marketing/#glovo" target="_blank" rel="noreferrer" class="ml-1 underline underline-offset-2">[voir case study]</a></p>
+            <p class="mt-1 text-neutral-700 leading-[1.8] justify-text">Contexte Maroc–Espagne tendu. Dispositif de gestion de crise structuré : messages validés multi-équipes, porte-paroles outillés, série « Humans of Glovo ». Résultat : risque réputationnel converti en actif de marque.</p>
+            <a href="https://yti.my.canva.site/glovo-ikea" target="_blank" rel="noreferrer" class="mt-2 inline-block text-sm underline underline-offset-2">voir le case study</a>
           </div>
         </article>
 
@@ -158,12 +148,13 @@
           <div class="text-[11px] uppercase tracking-wide text-neutral-500 mb-2">Compétence</div>
           <h3 class="text-base font-semibold text-neutral-900">Marketing digital & contenu</h3>
           <p class="mt-2 text-sm leading-[1.8] text-neutral-600 justify-text">Concevoir des contenus qui servent le pipeline : parcours SEO→activation, assets d’aide à la vente, campagnes mesurées.</p>
-          <figure class="mt-4 w-full aspect-[16/9] rounded-xl border border-black/10 bg-white ph flex items-center justify-center">
-            <span class="text-[12px] text-neutral-500">Image Placeholder</span>
+          <figure class="mt-4 w-full aspect-[16/9] overflow-hidden rounded-xl border border-black/10 bg-white">
+            <img src="Fan4all_case_study.jpeg" alt="Fan4All — Sportech marketplace" class="h-full w-full object-cover"/>
           </figure>
           <div class="mt-4 rounded-xl border border-black/10 bg-neutral-50 p-4 text-sm">
             <div class="font-medium text-neutral-900">Fan4All — Sportech marketplace</div>
-            <p class="mt-1 text-neutral-700 leading-[1.8] justify-text">Orchestration produit-marketing, social & earned media : portée cumulée 2.1M, engagement LinkedIn 14.45 %, EMV &gt; €100K. Contenus et rituels reliés à la conversion. <a href="https://sahelpub21-debug.github.io/IT_Product_Marketing/#fan4all" target="_blank" rel="noreferrer" class="ml-1 underline underline-offset-2">[voir case study]</a></p>
+            <p class="mt-1 text-neutral-700 leading-[1.8] justify-text">Orchestration produit-marketing, social & earned media : portée cumulée 2.1M, engagement LinkedIn 14.45 %, EMV &gt; €100K. Contenus et rituels reliés à la conversion.</p>
+            <a href="https://sahelpub21-debug.github.io/Fanforall/" target="_blank" rel="noreferrer" class="mt-2 inline-block text-sm underline underline-offset-2">voir le case study</a>
           </div>
         </article>
 
@@ -172,19 +163,21 @@
           <div class="text-[11px] uppercase tracking-wide text-neutral-500 mb-2">Compétence</div>
           <h3 class="text-base font-semibold text-neutral-900">Communication événementielle & RP</h3>
           <p class="mt-2 text-sm leading-[1.8] text-neutral-600 justify-text">Faire circuler la preuve : angles, porte-paroles, dispositifs salons — pour lier technique, usage et impact.</p>
-          <figure class="mt-4 w-full aspect-[16/9] rounded-xl border border-black/10 bg-white ph flex items-center justify-center">
-            <span class="text-[12px] text-neutral-500">Image Placeholder</span>
+          <figure class="mt-4 w-full aspect-[16/9] overflow-hidden rounded-xl border border-black/10 bg-white">
+            <img src="ATDA_Case_study.jpg" alt="ATDA — Event & PR" class="h-full w-full object-cover"/>
           </figure>
           <div class="mt-4 rounded-xl border border-black/10 bg-neutral-50 p-4 text-sm">
             <div class="font-medium text-neutral-900">ATDA — African Technology & Digital Awards</div>
-            <p class="mt-1 text-neutral-700 leading-[1.8] justify-text">Dispositif RP & event : programmation éditoriale, coordination speakers, press-room outillée. Retombées presse qualifiées et messages cohérents sur l’ensemble des touchpoints. <a href="https://sahelpub21-debug.github.io/IT_Product_Marketing/#atda" target="_blank" rel="noreferrer" class="ml-1 underline underline-offset-2">[voir case study]</a></p>
+            <p class="mt-1 text-neutral-700 leading-[1.8] justify-text">Dispositif RP & event : programmation éditoriale, coordination speakers, press-room outillée. Retombées presse qualifiées et messages cohérents sur l’ensemble des touchpoints.</p>
+            <a href="https://www.canva.com/design/DAG2_kBHl8M/ernDekhzltrcuZmUlExceg/view?utm_content=DAG2_kBHl8M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h36563a1b91" target="_blank" rel="noreferrer" class="mt-2 inline-block text-sm underline underline-offset-2">voir le case study</a>
           </div>
         </article>
       </div>
 
+      <!-- Autres cas -->
       <div class="mt-10 flex items-center justify-center">
-        <a href="https://sahelpub21-debug.github.io/IT_Product_Marketing/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">
-          Voir d’autres case studies
+        <a href="https://sahelpub21-debug.github.io/Fanforall/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">
+          Voir d’autres case studies (LG, etc.)
           <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/><path d="M15 12H3"/></svg>
         </a>
       </div>
@@ -218,7 +211,7 @@
     </div>
   </section>
 
-  <!-- KPI + mini-audit + liens -->
+  <!-- KPI + Mini-audit -->
   <section id="kpi" class="scroll-mt-24 py-16">
     <div class="mx-auto max-w-6xl px-6">
       <header class="mb-8">
@@ -252,33 +245,31 @@
               Voir le mini-audit
               <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/><path d="M15 12H3"/></svg>
             </a>
-            <a href="#" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">
+            <a href="https://calendly.com/gallouch-zakaria/30-min-consultation" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm text-neutral-900 hover:border-black/20 hover:bg-neutral-900/5">
               Planifier un entretien
               <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
             </a>
           </div>
         </div>
         <div class="md:col-span-2">
-          <figure class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-black/10 bg-white ph">
-            <figcaption class="absolute bottom-3 left-3 rounded-full border border-black/10 bg-white/90 px-3 py-1 text-xs text-neutral-600">Couverture mini-audit / schéma PESTEL</figcaption>
+          <figure class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-black/10 bg-white">
+            <img src="LG_Case_study.jpg" alt="Mini-audit / visuel" class="h-full w-full object-cover"/>
           </figure>
         </div>
       </div>
 
+      <!-- Ressources -->
       <div class="mt-12 rounded-2xl border border-black/10 bg-white p-6">
         <div class="mb-4 text-sm font-medium text-neutral-900">Ressources</div>
         <div class="flex flex-wrap gap-3">
-          <a href="https://sahelpub21-debug.github.io/IT_Product_Marketing/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5">
-            <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2"><path d="M3 7h18"/><path d="M3 12h18"/><path d="M3 17h18"/></svg>
-            Case studies
+          <a href="https://sahelpub21-debug.github.io/Fanforall/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5">
+            Case studies (LG & autres)
           </a>
-          <a href="https://ecowatt.ma/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5">
-            <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
+          <a href="https://ecowatt.ma/careers/responsable-marketing-et-communication" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5">
             Offre d’emploi
           </a>
-          <a href="#" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5">
-            <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-            Note d’intention
+          <a href="https://www.linkedin.com/in/zakaria-gallouch/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm hover:border-black/20 hover:bg-neutral-900/5">
+            LinkedIn
           </a>
         </div>
       </div>
