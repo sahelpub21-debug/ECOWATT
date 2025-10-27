@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
@@ -70,7 +70,7 @@
       <div class="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_0%,rgba(21,195,126,0.08),transparent_60%)]"></div>
     </div>
 
-    <div class="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-8 px-6 sm:grid-cols-2">
+    <div class="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-8 px-6">
       <div class="flex flex-col items-start gap-5">
         <h1 class="text-2xl font-semibold leading-tight text-neutral-900 sm:text-3xl lg:text-4xl">Candidature · Ecowatt</h1>
         <h2 class="text-xl font-medium leading-snug text-neutral-900 sm:text-2xl">De la technique à la traction : aligner marque, commercial et impact chez Ecowatt</h2>
@@ -86,11 +86,7 @@
           </a>
         </div>
       </div>
-
-      <!-- Visuel : photo de profil circulaire -->
-      <figure class="relative w-full flex items-center justify-center">
-        <img src="photo_profil zakaria_gallouch.png" alt="Zakaria Gallouch" class="h-56 w-56 rounded-full object-cover ring-1 ring-black/10"/>
-      </figure>
+      <!-- NOTE: la photo de profil du Hero a été retirée (déjà présente dans la sticky bar) -->
     </div>
   </section>
 
@@ -111,7 +107,13 @@
         <div class="md:col-span-2">
           <!-- Image carrée/rectangulaire -->
           <figure class="relative w-full aspect-[4/3] overflow-hidden rounded-2xl border border-black/10 bg-white">
-            <img src="Site centrale réseau (placeholder).jpeg" alt="Contexte énergie — Maroc" class="h-full w-full object-cover"/>
+            <!-- FICHIER AVEC ACCENTS/UNDERSCORES : URL ENCODÉE -->
+            <img 
+              src="Site_centrale_r%C3%A9seau_(placeholder).jpeg" 
+              alt="Contexte énergie — Maroc" 
+              class="h-full w-full object-cover" 
+              loading="lazy"
+            />
           </figure>
         </div>
       </div>
